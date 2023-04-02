@@ -41,6 +41,19 @@
   <img src="https://img.shields.io/badge/apache tomcat-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=white">
   
   <br><br>
- 
   
+ ## `👩‍💻 Current Status  👩‍💻`
+ 
+ <br>
+
+| 주차 | 주제 | 월요일 | 화요일 | 수요일 | 목요일 | 금요일 | 
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | 
+| 1주차 | Linux & Network |✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/FirstWeek/2023.02.27.TIl.md">Day1</a> | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/FirstWeek/2023.02.28.TIl.md">Day2</a> | | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/FirstWeek/2023.03.02.TIL.md">Day3</a> | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/FirstWeek/2023.03.03.TIL.md">Day4</a> |
+| 2주차 | JAVA Basic | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/Java/2023.03.06.TIL.md">Day5</a> | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/Java/2023.03.07.TIL.md">Day6</a> | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/Java/2023.03.08.TIL.md">Day7</a> | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/Java/2023.03.09.TIL.md">Day8</a> | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/Java/2023.03.10.TIL.md">Day9</a> | 
+| 3주차 | JAVA OOP | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/Java/2023.03.13.TIL.md">Day10</a> | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/Java/2023.03.14.TIL.md.md">Day11</a> | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/Java/2023.03.15.TIL.md">Day12</a> | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/Java/2023.03.16.TIL.md">Day13</a> | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/Java/2023.03.17.TIL.md">Day14</a> | 
+| 4주차 | JAVA API & SQL & JDBC |✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/Java/2023.03.20.TIL.md">Day15</a> | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/Java/2023.03.21.TIL.md">Day16</a> | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/Java/2023.03.22.TIL.md">Day17</a> | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/Java/2023.03.23.TIL.md">Day18</a> | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/Java/2023.03.24.TIL.md">Day19</a> | 
+| 5주차 | JAVA API & HTML & CSS |✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/Java/2023.03.27.TIL.md">Day20</a> | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/Java/2023.03.28.TIL.md">Day21</a> | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/Java/2023.03.29.TIL.md">Day22</a> | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/FirstWeek/2023.02.27.TIl.md">Day23</a> | ✔️ <br> <a href="https://github.com/num1dev/T.I.L/blob/main/FirstWeek/2023.02.27.TIl.md">Day24</a> | 
+| 6주차 |  |  |  |  |  |  |
+| 7주차 |  |  |  |  |  |  |
+
 
