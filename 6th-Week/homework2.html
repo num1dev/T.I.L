@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<meta charset="UTF-8">
+<title>Title</title>
+<style>
+@font-face {
+	font-family: 'HSBombaram3_Regular';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.1/HSBombaram3_Regular.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: 'HSBombaram3_Regular';
+	letter-spacing: 0.25em;
+}
+
+header {
+	background-image: linear-gradient(to right, #68578c, #5f4f7e, #735f99, #8a78aa, #a191ba,
+		#b8accb, #cfc7dc, #e7e3ee, #ffffff);
+	padding-top: 0.25em;
+	padding-bottom: 2em;
+	margin-bottom: 2em;
+}
+
+div#first_head {
+	font-size: 60px;
+	color: #fff;
+	text-shadow: 0.1em 0.1em 0.15em #232124;
+	width: 100%;
+	height: 100px;
+}
+
+legend {
+	font-size: 30px;
+}
+
+section article {
+	border: 1px dotted cfc7dc;
+	border-radius: 10px;
+	padding-top: 0.25em;
+	padding-bottom: 2em;
+	margin-top: 0.25em;
+	margin-bottom: 3em;
+	height: auto;
+	width: 80em;
+	box-sizing: border-box;
+	box-shadow: 0px 0px 10px 5px #625b6b;
+}
+
+.introducing {
+	height: auto;
+	width: 40em;
+	border: 3px #cfc7dc;
+	border-radius: 70%;
+	background-color: #cfc7dc;
+	box-shadow: 0px 0px 10px 5px #efefef;
+	padding: 1em;
+}
+
+a {
+	text-decoration: none;
+}
+
+.introduce_page a {
+	margin-right: 3em;
+	color: #f0f0f0;
+	text-shadow: 0.1em 0.1em 0.15em #232124;
+	font-size: 2em;
+}
+
+.introduce_page a:hover {
+	font-weight: bold;
+	color: #efefef;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+#art1 h2 {
+	color: #b4a244;
+}
+
+#art2 h2 {
+	color: #b67a42;
+}
+
+#art2 span {
+	color: #a55367;
+}
+
+#art3 h2 {
+	color: #4673b2;
+}
+
+#art3 span {
+	color: #7fa751;
+}
+
+h3 {
+	color: #3f3f3f;
+	font-size: 1.3em;
+}
+
+#art3 img:hover {
+	opacity: 0.5;
+}
+
+h4 {
+	color: #3f3f3f;
+}
+
+footer {
+	background-image: linear-gradient(to right, #68578c, #5f4f7e, #735f99, #8a78aa, #a191ba,
+		#b8accb, #cfc7dc, #e7e3ee, #ffffff);
+	padding-top: 2em;
+	font-size: 35px;
+	color: #fff;
+	text-shadow: 0.1em 0.1em 0.15em #232124;
+	width: 100%;
+	height: 80px;
+	margin-top: 2em;
+}
+</style>
+
+
+<body>
+
+	<div align="center">
+		<header class="head">
+			<div id="first_head">
+				<p>서진's HTML5 학습</p>
+			</div>
+
+
+			<nav class="introduce_page">
+				<a href="https://www.google.com">Google</a> <a
+					href="https://www.naver.com">Naver</a> <a
+					href="https://www.daum.net">Daum</a>
+			</nav>
+		</header>
+
+		<br>
+		<section>
+			<article id="art1">
+				<h2>👩나의 소개👩</h2>
+				<img
+					src=https://user-images.githubusercontent.com/122321793/229394855-2c626c24-1829-46ba-8121-630912372e71.gif
+					width=300; height=250; /> <br>
+				<div class="my_image"></div>
+				<h3>홍서진</h3>
+				<div class="introducing">
+					<form action="..." method="get">
+
+						<div class="my_gender">
+							남성 <input type="radio" name="gender" value="male"> 여성 <input
+								type="radio" name="gender" value="female" checked>
+						</div>
+						<br>
+						<div class="my_age">
+							<label for=age>나이 ❔</label> <input id=age name=age type=number
+								min=28 max=100 required value="28">
+						</div>
+						<br>
+						<div class="my_skillsets">
+							<label for=skills>관심 기술 ❔</label> <input id=skills name=skills
+								type=text list=skills_list  placeholder= "Vue.js">
+							<datalist id=skills_list >
+								<option value=JAVA label=JAVA>
+								<option value=html label=html>
+								<option value=CSS label=CSS>
+								<option value=Javascript label=Javascript>
+								<option value=Vue.js label=Vue.js>
+								<option value=SpringBoot label=SpringBoot>
+							</datalist>
+						</div>
+						<br>
+						<div class="my_color">
+							좋아하는 색 ❔ <input type="color" name="stcolor" value="#660099">
+						</div>
+						<br>
+						<div class="my_pages">
+							<a href="https://github.com/num1dev"><img
+								src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"></a>
+						</div>
+
+
+					</form>
+				</div>
+			</article>
+
+
+
+			<article id="art2">
+				<h2>
+					📕<span>올해</span> 재밌게 읽은 책📗
+				</h2>
+				<br> <img
+					src=https://user-images.githubusercontent.com/122321793/229395802-299749ea-865c-4bde-9d81-51f15ed38cc2.png
+					width=200; height=150; /> <br>
+				<br>
+				<table border="1">
+					<tr>
+						<th>제목</th>
+						<th>장르</th>
+					</tr>
+					<tr>
+						<td>신 도라에몽</td>
+						<td>추리</td>
+					</tr>
+					<tr>
+						<td>명탐정 코난</td>
+						<td>스릴러</td>
+					</tr>
+					<tr>
+						<td>짱구는 못말려</td>
+						<td>액션</td>
+					</tr>
+				</table>
+			</article>
+
+			<article id="art3">
+				<h2>
+					📣 자랑하고 싶은 <span>우리동네</span>의 아름다운 곳📣
+				</h2>
+				<h4>
+					<p>아름다운 정릉천입니다</p>
+					<p>청계천과 연결되는 정릉천은 2011년 자연형 하천으로 조성됐으며</p>
+					<p>2005년부터 복개 공사를 통해 2010년 주민 친화 하천으로 새단장하고</p>
+					<p>힐링의 공간으로 자리매김 하고 있습니다.</p>
+				</h4>
+
+				<a><img
+					src="https://user-images.githubusercontent.com/122321793/228765947-62cdff57-dbe4-480f-b013-e4040d85f75c.jpg"
+					width="500"></a> <br> &nbsp; &nbsp;
+			</article>
+		</section>
+
+
+
+
+		<aside>
+			<h2>🕶 소개하고 싶은 영상 🕶</h2>
+			<br>
+
+			<iframe width="1200" height="700"
+				src="https://www.youtube.com/embed/xy8UZRLYh3k"
+				title="YouTube video player" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				allowfullscreen></iframe>
+		</aside>
+
+		<br>
+		<footer>
+			<em>이 문서는 홍서진에 의해 작성되었습니다</em>
+		</footer>
+
+	</div>
+</body>
+</html>
