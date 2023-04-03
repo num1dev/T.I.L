@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		var num;
+		while (true) {
+			num = window.prompt("숫자를 한 개를 입력하세요..");
+			if (num >= 1 && num <= 9) {
+				document.writeln("<h1 style='color: blue;'>" + num + "단입니다.</h1>");
+				document.write('<hr>');
+				for (let i = 0; i < 10; i++) {
+					document.writeln(num + "×" + i + "=" + num * i + '<br>');
+				}
+				break;
+			} else {
+				window.alert("1~9사이 숫자를 입력하세요..");
+			}
+
+		}
+	</script>
+</body>
+</html>
