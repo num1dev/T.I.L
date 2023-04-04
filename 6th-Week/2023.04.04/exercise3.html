@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <h1>자바스크립트 실습(3)</h1>
+    <hr>
+    <script src="util.js"></script>
+    <script>
+      let sum = 0;
+      const input = window.prompt("숫자를 입력하세요.");
+      if (input === null || input === "") {
+        write("비어있는 입력", "h3");
+      } else if (isNaN(input)) {
+        write(input, "h3");
+      } else {
+        for (let i = 1; i <= input; i++) {
+          sum += i;
+        }
+        writeColor("1부터 " + input + "까지의 합은 " + sum + " 입니다.", "h2", "black");
+      }
+    </script>
+  </body>
+</html>
+
