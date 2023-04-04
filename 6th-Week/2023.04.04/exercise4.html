@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 실습(4)</title>
+</head>
+<body>
+	<h1>자바스크립트 실습(4)</h1>
+	<hr>
+	<script src="util.js"></script>
+	<script>
+		for (let i = 0; i < 5; i++) {
+			const randNum = parseInt(Math.random() * 6);
+			if (randNum === 0) {
+				write("결과값이 없어요", "h3");
+			} else {
+				sum(randNum);
+			}
+		}
+		function sum(num) {
+			let result = 0;
+			for (let i = 1; i <= num; i++) {
+				result += i;
+			}
+			write("호출 결과값:" + result, "h2");
+		}
+	</script>
+</body>
+</html>
