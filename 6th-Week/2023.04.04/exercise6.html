@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script src="util.js"></script>
+	<script>
+		const y = parseInt(window.prompt("년도를 입력하세요"));
+		const m = parseInt(window.prompt("월을 입력하세요"));
+		const d = parseInt(window.prompt("일을 입력하세요"));
+
+		const day = getKorDay(y, m, d);
+		if (day === undefined) {
+			writeColor("결과없음", "h1", "red");
+		} else {
+			writeColor(y + "년 " + m + "월 " + d + "일은 " + result + "입니다", "h1", "blue");
+		}
+		function getKorDay (y, m, d) {
+			if (isNaN(y) || isNaN(m) || isNaN(d)) {
+				return undefined;
+			}
+			switch (new Date(y, m-1, d).getDay()) {
+			case 0:
+				result = "일요일";
+				break;
+			case 1:
+				result = "월요일";
+				break;
+			case 2:
+				result = "화요일";
+				break;
+			case 3:
+				result = "수요일";
+				break;
+			case 4:
+				result = "목요일";
+				break;
+			case 5:
+				result = "금요일";
+				break;
+			case 6:
+				result = "토요일";
+			}
+			return result;
+		}
+	</script>
+</body>
+</html>
