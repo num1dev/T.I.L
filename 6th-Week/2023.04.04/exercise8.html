@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script src="util.js"></script>
+	<script>
+		let arr = [];
+		let input;
+		let result;
+		function printH1(content) {
+			document.write("<h1>" + content + "</h1>");
+		}
+		function printH4(content) {
+			document.write("<h4>" + content + "</h4>");
+		}
+		while (input !== null) {
+			input = window.prompt("입력하세요 :");
+			if (input !== null) {
+				arr[arr.length] = input;
+			}
+		}
+		const randNum = parseInt((Math.random() * 10) + 1);
+		switch (randNum) {
+		case 1:
+		case 4:
+		case 6:
+			result = apply(arr, printH1);
+			break;
+		case 3:
+		case 5:
+		case 7:
+			result = apply(arr, printH4);
+			break;
+		case 8:
+		case 9:
+			result = apply("ㅋㅋ", printH1);
+			break;
+		default:
+			result = apply(arr, function(content) {
+			});
+			break;
+		}
+		if (result) {
+			window.alert("처리 성공");
+		} else {
+			window.alert("처리 실패");
+		}
+
+		function apply(arr, func) {
+			if (!Array.isArray(arr) || typeof func !== 'function') {
+				console.error('아규먼트 오류');
+				return false;
+			}
+
+			for (let i = 0; i < arr.length; i++) {
+				func(arr[i]);
+			}
+
+			return true;
+		}
+	</script>
+</body>
+</html>
