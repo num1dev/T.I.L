@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body{
+	  font-style: normal;
+	 font-family: 'GangwonEdu_OTFBoldA';
+	 text-align:center;
+	 
+}
+h1 {
+	border : 10px #ece6cc; 
+	border-radius : 3px;
+	background-color: #ece6cc;
+	padding:10px;
+}
+</style>
+</head>
+<body>
+	<h1>펜션 예약 서비스</h1>
+	<hr>
+	<form method="post" action="/edu/reservation">
+		<img src = "https://user-images.githubusercontent.com/122321793/231328292-be20a04e-dbcb-44bb-8a9d-b7c4f7202ba5.png">
+		<br><br>
+		<label for="guestName">🔒 예약자명 :</label> 
+		<input type="text" name="guestName" placeholder="예약자명을 입력하세요" ><br>
+		<br>
+		<label for="guestPassWord">👁‍🗨 암호</label>	
+		<input type="password" name="guestPassWord" placeholder="비밀번호를 입력하세요" >
+	
+		<br><br> 
+		<label for="room">🏡 룸 선택 :</label>
+		<input type="radio" name="room" value="둘리" required>둘리
+		<input type="radio" name="room" value="희동" required>희동
+		<input type="radio" name="room" value="도우너" required>도우너
+		<input type="radio" name="room" value="또치" required>또치 
+		
+		<br><br>
+		<label for="optional">🤍 추가요청사항 :</label>
+		<input type="checkbox" name="optional" value="바베큐">바베큐
+		<input type="checkbox" name="optional" value="수영장">수영장
+		<input type="checkbox" name="optional" value="낚시">낚시
+		<input type="checkbox" name="optional" value="조식">조식
+		
+		<br><br>
+		<label for="tripDate">🔍 예약 날짜 :</label>
+		<input type="date" name="tripDate" required>
+		
+		<br><br>
+		<input type="submit" value="보내기">
+		<input type="reset" value="다시작성하기">
+		
+		<br><br>
+		
+	</form>
+</body>
+</html>
+
+
+
+
