@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+@font-face {
+	font-family: 'GangwonEdu_OTFBoldA';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: 'GangwonEdu_OTFBoldA';
+	letter-spacing: 0.25em;
+	text-align: center;
+}
+
+.header {
+	display: block;
+	color: #3f3f3f;
+	width: 600px;
+	height: 100px;
+	margin-right: auto;
+	margin-left: auto;
+	line-height: 100px;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	box-shadow: 0.5em 0.5em 0.5em #404040;
+	display: flex;
+}
+
+.container {
+	padding: 30px 100px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.element {
+	width: 17%;
+	height: 30%;
+	margin-bottom: 10%;
+	margin-right: 0.5%;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.list {
+	border: 5px solid #437299;
+	border-radius: 10px;
+	color: #ffffff;
+	background-color: #437299;
+	width: 40%;
+	font-size: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 3em;
+	padding-top: 0.2em;
+	padding-bottom: 0.1em;
+}
+
+.list p {
+	margin-top: 5.8em;
+}
+
+.list #resetBtn {
+	border: 0;
+	background-color: transparent;
+	font-family: 'GangwonEdu_OTFBoldA';
+	letter-spacing: 0.25em;
+	color: #ffffff;
+	font-size: 20px;
+	margin-top: 6em;
+}
+</style>
+</head>
+<body>
+	<div>
+		<div class="header">
+			<h1>원하는 상품을 클릭해 주세요!! 마구마구^^</h1>
+		</div>
+
+		<hr>
+
+		<div class="container">
+			<div class="element">
+				<img src="../images/1.jpg" onclick="request(1)">
+			</div>
+			<div class="element">
+				<img src="../images/2.jpg" onclick="request(2)">
+			</div>
+			<div class="element">
+				<img src="../images/3.jpg" onclick="request(3)">
+			</div>
+			<div class="element">
+				<img src="../images/4.jpg" onclick="request(4)">
+			</div>
+			<div class="element">
+				<img src="../images/5.jpg" onclick="request(5)">
+			</div>
+			<div class="element">
+				<img src="../images/6.jpg" onclick="request(6)">
+			</div>
+			<div class="element">
+				<img src="../images/7.jpg" onclick="request(7)">
+			</div>
+			<div class="element">
+				<img src="../images/8.jpg" onclick="request(8)">
+			</div>
+			<div class="element">
+				<img src="../images/9.jpg" onclick="request(9)">
+			</div>
+			<div class="element">
+				<img src="../images/10.jpg" onclick="request(10)">
+			</div>
+		</div>
+
+
+		<div class="list">
+			<span style="border-bottom: 1px dashed #000; padding: 20px;">
+				선택한 상품 리스트</span>
+			<ul id="realText"></ul>
+			<div id="resetBtn" onclick= "itemRemove()">상품비우기</div>
+		</div>
+		<script>
+			const itemList = document.getElementById("realText");
+			const remove = document.getElementById("resetBtn");
+			function request(id) {
+				const xhr = new XMLHttpRequest();
+				xhr.open('GET', '/edu/basket?id=' + id, true);
+				xhr.send();
+				xhr.onload = function(event) {
+					if (xhr.status == 200) {
+						var target = document.getElementById('realText');
+						target.innerHTML = "";
+						const str = JSON.parse(xhr.responseText);
+						console.log(str);
+
+						for ( let key in str) {
+							target.innerHTML += `<li>${key}상품${str[key]}</li>`;
+						}
+
+					}
+				};
+
+			}
+			function itemRemove(){
+				const xhr = new XMLHttpRequest();
+				 xhr.open('GET', '/edu/basket', true);
+				 xhr.send();
+				xhr.onload = function(event) {
+					if (xhr.status == 200) {
+						var target = document.getElementById('realText');
+						target.innerHTML = "";
+						const str = JSON.parse(xhr.responseText);
+						console.log(str);
+				}
+			}
+			
+		}
+	
+			
+		</script>
+</body>
+</html>
