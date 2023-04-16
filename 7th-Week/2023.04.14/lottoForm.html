@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+h2{
+	color : red;
+}
+label{
+	margin-right:30px;
+	margin-bottom:10px;
+	font-weight:bold;
+	font-size:20px;
+}
+	
+#input{
+	margin-right:10px;
+	margin-bottom:10px;
+}
+#img{
+	margin-top:10px;	
+	width :40px;	
+	height:30px;
+}
+</style>
+</head>
+<body>
+	<h2>로또 번호를 맞춰보세요!!!</h2>
+	<hr>
+	<form method="get" action="/mvc/lotto1">
+	<label for="input">1부터 6까지의 숫자를 입력하세요 : </label> 
+	<input type="text" id="input" name="num">
+	<input type="image" id="img" name="img" src="/edu/images/clover.png">
+	</form>
+</body>
+</html>
+
+
