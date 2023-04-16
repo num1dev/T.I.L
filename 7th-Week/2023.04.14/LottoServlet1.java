@@ -29,7 +29,7 @@ public class LottoServlet1 extends HttpServlet {
 		int minute = currentTime.getMinute();
 		
 		TimeVO timeVO = new TimeVO(hour, minute);
-	
+	 
 		request.setAttribute("timeVO", timeVO);
 		
 		
