@@ -10,7 +10,7 @@ public class StudyApp {
                 = new ClassPathXmlApplicationContext("bean1.xml");
 
         // st1, st2, st3 빈 객체를 가져옴
-        Student st1 = (Student) factory.getBean("st1");
+        Student st1 = (Student) factory.getBean("st1"); 
         Student st2 = (Student) factory.getBean("st2");
         Student st3 = (Student) factory.getBean("st3");
 
