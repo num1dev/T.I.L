@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.time.LocalDateTime;
 
-
+ 
 public class GreetingTest {
     public static void main(String[] args) {
              ApplicationContext factory
