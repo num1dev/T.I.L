@@ -5,3 +5,4 @@ public class NightGreetingImpl implements Greeting {
         System.out.println("안녕히 주무세요.");
     }
 } 
+ 
