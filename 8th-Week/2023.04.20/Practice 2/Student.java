@@ -13,7 +13,7 @@ public class Student {
 
     public void setName(String name) {
         this.name = name;
-    }
+    } 
 
     public Homework getMyHomework() {
         return myHomework;
