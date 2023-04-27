@@ -9,7 +9,7 @@
 	<bean id="h2" class="exam2.Homework">
 		<constructor-arg value="영어"/>
 	</bean>
-
+ 
 	<bean id="h3" class="exam2.Homework">
 		<constructor-arg value="수학"/>
 	</bean>
