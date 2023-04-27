@@ -6,3 +6,4 @@ public class NightGreetingImpl implements Greeting {
     }
 } 
  
+ 
