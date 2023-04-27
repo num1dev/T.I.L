@@ -27,5 +27,5 @@ public class GreetingTest {
                 bean4.greet();
             }
         }
-    }
+    } 
  
