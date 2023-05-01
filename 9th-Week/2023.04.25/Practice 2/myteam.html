@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function myTeam() {
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    let result = document.getElementById("result");
+                    let response = JSON.parse(xhr.responseText);
+                    result.innerHTML = "<h3>우리 팀명은 " + response.teamName + "입니다.</h3>";
+                }
+            };
+            xhr.open("GET", "http://localhost:8088/myteam");
+            xhr.send();
+        }
+
+        function myTeamMember() {
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    let result = document.getElementById("result");
+                    let response = JSON.parse(xhr.responseText);
+                    let teamName = response.teamName;
+                    result.innerHTML = "<h1>" + response.teamName + "팀의 팀원들을 소개합니다.</h1>";
+
+                        let output =" ";
+                     for(let i = 0; i < 4; i++){
+                         output += "<h3> " + response.teamMember[i].name + ": 별명은 " + response.teamMember[i].nicName + "이고 좋아하는 음식은" + response.teamMember[i].food + "입니다.</h3>";
+                         result2.innerHTML = output;
+                     }
+
+                }
+            };
+            xhr.open("GET", "http://localhost:8088/myteam");
+            xhr.send();
+            console.log();
+        }
+    </script>
+</head>
+<body>
+<h1>우리팀 소개</h1>
+<hr>
+</body>
+<button type="button" onclick="myTeam()">우리팀명</button>
+<button type="button" onclick="myTeamMember()">우리팀원</button>
+<output id="result"></output>
+<output id="result2"></output>
+
+</body>
+</html>
+
+
