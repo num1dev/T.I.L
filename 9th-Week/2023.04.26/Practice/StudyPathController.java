@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.Mapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 @Controller
-public class StudyPathController {
+public class StudyPathController { 
     @GetMapping (value="/study/{number}/thymeleaf")
     public String getAllBoards(@PathVariable("number") int num){
             if (num == 1)
