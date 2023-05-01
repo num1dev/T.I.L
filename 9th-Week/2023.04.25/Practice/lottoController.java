@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 public class lottoController {
     @ModelAttribute("count")
     public int[] createCount() {
-        return new int[1];
+        return new int[1]; 
     }
     @RequestMapping("/lotto")
     public String lottoProcess(LottoDTO vo, @ModelAttribute("count")int arr[]){
