@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script src="util.js"></script>
+<script>
+	function getKorDay() {
+		var kordayname = [ "일", "월", "화", "수", "목", "금", "토" ]
+		return kordayname[new Date().getDay()];
+	}
+	function getKorMonth() {
+		var kormonthname = [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+				"11", "12" ]
+		return kormonthname[new Date().getMonth()];
+	}
+</script>
+</head>
+
+
+<body>
+	<h1>이벤트 모델-인라인</h1>
+	<hr>
+	<button onclick="changeColor('red')">빨강색</button>
+	<button onclick="changeColor('blue')">파랑색</button>
+	<button onclick="changeColor('yellow')">노랑색</button>
+	<hr>
+	<script>
+		document.write("<h2>"+ '오늘은 ' + getKorMonth() + '월 ' + getKorDay() + '요일입니다.'+ "<h2>");
+		
+		function changeColor(color) {
+			var myday = document.getElementsByTagName("h2")[0];
+			  myday.style.color = color;
+		}
+		
+	</script>
+</body>
+</html>
+

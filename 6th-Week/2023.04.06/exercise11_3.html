@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<script src="util.js"></script>
+<script>
+	function getKorDay() {
+		var kordayname = [ "일", "월", "화", "수", "목", "금", "토" ]
+		return kordayname[new Date().getDay()];
+	}
+	function getKorMonth() {
+		var kormonthname = [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+				"11", "12" ]
+		return kormonthname[new Date().getMonth()];
+	}
+</script>
+</head>
+
+
+<body>
+	<h1>이벤트 모델-표준</h1>
+	<hr>
+	<button id = "b1">빨강색</button>
+	<button id = "b2">파랑색</button>
+	<button id = "b3">노랑색</button>
+	<hr>
+	<script>
+		document.write("<h2>"+ '오늘은 ' + getKorMonth() + '월 ' + getKorDay() + '요일입니다.'+ "<h2>");
+		
+		var myday = document.getElementsByTagName("h2")[0];
+		var button1 = document.getElementById('b1');
+		var button2 = document.getElementById('b2');
+		var button3 = document.getElementById('b3');
+
+		button1.addEventListener('click',function(){
+            myday.style.color = 'red';
+        });
+
+		button2.addEventListener('click',function(){
+            myday.style.color = 'blue';
+        });
+		
+
+		button3.addEventListener('click',function(){
+            myday.style.color = 'yellow';
+        });
+		
+
+		
+	</script>
+</body>
+</html>
+

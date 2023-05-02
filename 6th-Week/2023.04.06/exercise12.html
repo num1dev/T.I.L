@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+@font-face {
+	font-family: 'HSBombaram3_Regular';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.1/HSBombaram3_Regular.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: 'HSBombaram3_Regular';
+	letter-spacing: 0.25em;
+	width: 100vw;
+	font-weight: 1000;
+	text-align: center
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+}
+
+div	button {
+	width: 10.5%;
+	height: 40px;
+	margin-left: 0.5%;
+	font-family: 'HSBombaram3_Regular';
+	font-size: 10%;
+}
+
+a{
+ text-decoration:none;
+}
+</style>
+</head>
+<body>
+	<a href = "https://ko.wikipedia.org/wiki/구구단" ><h1>구구단</h1></a>
+	<div class="container">
+		<button onclick="getGuGu(1);">1단</button>
+		<button onclick="getGuGu(2);">2단</button>
+		<button onclick="getGuGu(3);">3단</button>
+		<button onclick="getGuGu(4);">4단</button>
+		<button onclick="getGuGu(5);">5단</button>
+		<button onclick="getGuGu(6);">6단</button>
+		<button onclick="getGuGu(7);">7단</button>
+		<button onclick="getGuGu(8);">8단</button>
+		<button onclick="getGuGu(9);">9단</button>
+	</div>
+	<h3></h3>
+	<script>
+		const dom = document.getElementsByTagName("h3")[0];
+		function getGuGu(number) {
+			dom.innerHTML="";
+			for (let i = 1; i <= 9; i++) {
+				dom.innerHTML+= `${i} * ${number} = ${i*number} </br>`;
+			}
+		}
+
+	</script>
+</body>
+</html>
