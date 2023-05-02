@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script src="util.js"></script>
+	<script>
+
+		function DayInfo(name, year, month, day) {
+			this.name = name;
+			this.year = year;
+			this.month = month;
+			this.day = day;
+		}
+		
+		DayInfo.prototype.getTotalDates = function() {
+			const today = new Date();
+			const birthday = new Date(this.year, this.month - 1, this.day);
+			const diffTime = today.getTime() - birthday.getTime();
+			const diffDays = parseInt(diffTime / (1000 * 60 * 60 * 24));
+			return this.name + "님은 태어난지 "+ diffDays + "일 되었어요.";
+		};
+		
+		DayInfo.prototype.getKorDay = function() {
+			const korDays = ['일', '월', '화', '수', '목', '금', '토'];
+			const birthday = new Date(this.year, this.month - 1, this.day);
+			const dayOfWeek = korDays[birthday.getDay()];
+			
+			return this.name + "님은 " + dayOfWeek + "요일에 태어났어요";
+		};
+		
+				
+		let day1 = new DayInfo('홍길동',1998,1,2);
+		writeColor(day1.getTotalDates(), 'h3','blue');
+		writeColor(day1.getKorDay(), 'h3','red');
+		
+		
+		let day2 = new DayInfo('홍길짱',2002,7,8);
+		writeColor(day2.getTotalDates(), 'h3','green');
+		writeColor(day2.getKorDay(), 'h3','yellow');
+		
+		let day3 = new DayInfo('홍길깡',2010,6,12);
+		writeColor(day3.getTotalDates(), 'h3','pink');
+		writeColor(day3.getKorDay(), 'h3','black');
+	
+		
+	</script>
+</body>
+</html>
