@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lab1">
+
+	<select id="exam1"  resultType="BookDTO">
+  	 	select id, title, concat(format(price, 0), '원') as price, kind from book
+	</select>
+	<select id="exam2"  parameterType="int" resultType="BookDTO" >
+		select id, title, concat(format(price, 0), '원') as price, kind from book order by price desc
+	</select>
+	<select id="exam3"  parameterType="int" resultType="BookDTO">
+		select title, concat(format(price, 0), '원') as price from book where price>=20000
+	</select>
+	<select id="exam4"  parameterType="String" resultType="BookDTO">
+		select title,  concat(format(price, 0), '원') as price from book where kind='b01'
+	</select>
+	<select id="exam5"  parameterType="String" resultType="BookDTO">
+		select title, concat(format(price, 0), '원') as price from book where kind='b04' or kind='b05'
+	</select>
+	<select id="exam6" parameterType="String" resultType="BookDTO">
+		select title, concat(format(price, 0), '원') as price from book where title like concat('%', #{title}, '%')
+	</select>
+	<select id="exam7" parameterType="String" resultType="BookDTO">
+		select kind, concat(format(avg(price), 0), '원') price from book group by kind
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
